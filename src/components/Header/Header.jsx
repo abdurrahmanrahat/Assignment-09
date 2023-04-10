@@ -7,7 +7,7 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='flex justify-between items-center my-container'>
+        <div className='flex justify-between items-center my-container p-2'>
             <h2 className='font-bold text-3xl py-8'>OrionEdu</h2>
 
             <nav>
