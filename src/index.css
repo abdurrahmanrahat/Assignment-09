@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.btn-primary{
+    @apply  font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-lg border-transparent   text-white  hover:bg-cyan-400 bg-gradient-to-r from-violet-400 to-violet-600	
+}
+
+.my-container{
+    @apply md:mx-28
+}
+
+.margin-left{
+    @apply ml-6
+}
+
+
+/* .btn-outlined{
+    @apply  font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full  text-gray-700 hover:bg-cyan-400 hover:border-transparent border-2 border-cyan-200
+} */
