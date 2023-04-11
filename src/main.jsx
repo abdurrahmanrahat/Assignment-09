@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Statistics from './components/Statistics/Statistics';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "statistics",
+        element: <Statistics></Statistics>,
+        loader: () => fetch('assignmentMarks.json')
       }
     ]
   },
