@@ -1,14 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import JobList from '../JobList/JobList';
+import FeaturedJob from '../FeaturedJob/FeaturedJob';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     const [jobLists, setJobLists] = useState([]);
 
-    useEffect( () => {
-        fetch('jobCategory.json')
-        .then(res => res.json())
-        .then(data => setJobLists(data))
+    const [featuredJobs, setFeaturedJobs] = useState([]);
+
+
+    // const featuredJobs = featuredJob.slice(0, 4);
+    useEffect(() => {
+        fetch('featuredJobs.json')
+            .then(res => res.json())
+            .then(data => setFeaturedJobs(data))
     }, [])
+
+    // handler job view details page
+    const handleJobViewDetails = (job) =>{
+        console.log(job);
+    }
+
+
+    // job list
+    useEffect(() => {
+        fetch('jobCategory.json')
+            .then(res => res.json())
+            .then(data => setJobLists(data))
+    }, [])
+
+
+    // console.log(featuredJobs);
 
     return (
         <div>
@@ -30,12 +52,28 @@ const Home = () => {
                 <p className='text-lg mt-4 text-gray-600'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className='md:flex mt-8 md:gap-6'>
                     {
-                        jobLists.map(jobList => <JobList 
+                        jobLists.map(jobList => <JobList
                             key={jobList.id}
                             jobList={jobList}
-                            ></JobList>)
+                        ></JobList>)
                     }
                 </div>
+            </div>
+
+            {/* Featured Jobs Section */}
+            <div className='my-container p-2 text-center mt-28'>
+                <h2 className='text-5xl font-semibold'>Featured Jobs</h2>
+                <p className='text-lg mt-4 text-gray-600'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                <div className='md:grid grid-cols-2 my-12 md:gap-6'>
+                    {
+                        featuredJobs.map(featuredJob => <FeaturedJob
+                            key={featuredJob.id}
+                            featuredJob={featuredJob}
+                            handleJobViewDetails={handleJobViewDetails}
+                        ></FeaturedJob>).slice(0, 4)
+                    }
+                </div>
+                <button className='btn-primary'>See All Jobs</button>
             </div>
         </div>
     );
