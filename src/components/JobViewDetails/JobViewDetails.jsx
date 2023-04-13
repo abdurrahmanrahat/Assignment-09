@@ -32,8 +32,8 @@ const JobViewDetails = () => {
     }
 
     return (
-        <div className='md:flex my-container gap-14 my-12'>
-            <div className='w-2/3 p-4'>
+        <div className='md:flex my-container md:gap-14 my-12'>
+            <div className='md:w-2/3 p-4'>
                 <p className='text-lg text-gray-600'><span className='text-gray-900 font-bold'>Job Description:</span> {singleJob.jobDescription}</p>
                 <p className='text-lg text-gray-600 my-6'><span className='text-gray-900 font-bold'>Job Responsibility:</span> {singleJob.jobResponsibility}</p>
                 <h6 className='text-gray-900 font-bold'>Educational Requirements:</h6>
@@ -42,7 +42,7 @@ const JobViewDetails = () => {
                 <h6 className='text-gray-900 font-bold'>Experiences:</h6>
                 <p className='text-lg text-gray-600 my-4'>{singleJob.experiences}</p>
             </div>
-            <div className='w-1/3 bg-blue-100 bg-opacity-40 p-6 rounded-md'>
+            <div className='md:w-1/3 bg-blue-100 bg-opacity-40 p-6 rounded-md'>
                 <div>
                     <h4 className='text-2xl font-bold'>Job Details</h4>
                     <hr className='my-4' />

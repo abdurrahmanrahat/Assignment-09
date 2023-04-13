@@ -6,8 +6,8 @@ const AppliedSinJob = ({ singleJob }) => {
     const { id, logo, jobTitle, companyName, location, salary, isRemote } = singleJob[0]
     return (
         <div className='my-container'>
-            <div className='flex justify-between items-center my-10'>
-                <div className='flex gap-14'>
+            <div className='md:flex justify-between items-center mt-12 md:my-16'>
+                <div className='md:flex gap-14'>
                     <img className='w-52 h-36' src={logo} alt="" />
                     <div>
                         <h2 className='font-bold text-2xl'>{jobTitle}</h2>
