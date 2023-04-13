@@ -1,7 +1,7 @@
 [
     {
         "id": "6435679778ee6bb1e108b655",
-        "logo": "/src/assets/FeaturedJobs/microsoft.png",
+        "logo": "./images/FeaturedJobs/microsoft.png",
         "companyName": "Microsoft",
         "jobTitle": "Technical Database Engineer",
         "location": "Washington,US",
@@ -17,7 +17,7 @@
     },
     {
         "id": "643567974d8812fea892a908",
-        "logo": "/src/assets/FeaturedJobs/linkedin.png",
+        "logo": "./images/FeaturedJobs/linkedin.png",
         "companyName": "Linkedin",
         "jobTitle": "UI/UX Designer",
         "location": "California,US",
@@ -33,7 +33,7 @@
     },
     {
         "id": "64356797157a8d73148f8109",
-        "logo": "/src/assets/FeaturedJobs/geico.png",
+        "logo": "./images/FeaturedJobs/geico.png",
         "companyName": "GEICO- Insurance company",
         "jobTitle": "Web Developer",
         "location": "Chevy Chase,Maryland",
@@ -49,7 +49,7 @@
     },
     {
         "id": "64356797cd3c5aa836e19d4b",
-        "logo": "/src/assets/FeaturedJobs/google.png",
+        "logo": "./images/FeaturedJobs/google.png",
         "companyName": "Google LLC",
         "jobTitle": "Data Entry Clerk -Remote",
         "location": "Mountain View, California",
@@ -65,7 +65,7 @@
     },
     {
         "id": "64356797382022b4f48e0f25",
-        "logo": "/src/assets/FeaturedJobs/netlify.png",
+        "logo": "./images/FeaturedJobs/netlify.png",
         "companyName": "Netlify",
         "jobTitle": "Graphic Designer",
         "location": "San Francisco",
@@ -81,7 +81,7 @@
     },
     {
         "id": "643567977e9e9c6160c7d5d5",
-        "logo": "/src/assets/FeaturedJobs/tesla.png",
+        "logo": "./images/FeaturedJobs/tesla.png",
         "companyName": "Tesla",
         "jobTitle": "Web Developer",
         "location": "Austin,Texas",

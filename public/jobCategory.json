@@ -1,25 +1,25 @@
 [
     {
         "id": "64346b3f612b9b1964ce0f0c",
-        "coverImage": "/src/assets/finance.jpg",
+        "coverImage": "./images/finance.jpg",
         "title": "Account & Finance",
         "job": "300 Jobs Available"
     },
     {
         "id": "64346b3f3cae56382a7b6937",
-        "coverImage": "/src/assets/creative.jpg",
+        "coverImage": "./images/creative.jpg",
         "title": "Creative Design",
         "job": "250 Jobs Available"
     },
     {
         "id": "64346b3fe0bcdfe4db08260d",
-        "coverImage": "/src/assets/marketing.jpg",
+        "coverImage": "./images/marketing.jpg",
         "title": "Marketing & Sales",
         "job": "225+ Jobs Available"
     },
     {
         "id": "64346b3f5f99a93c06fea131",
-        "coverImage": "/src/assets/engineering.jpg",
+        "coverImage": "./images/engineering.jpg",
         "title": "Engineering Job",
         "job": "150 Jobs Available"
     }

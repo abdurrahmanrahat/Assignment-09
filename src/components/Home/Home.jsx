@@ -37,7 +37,7 @@ const Home = () => {
                     <button className='btn-primary'>Get Started</button>
                 </div>
                 <div className='md:w-1/2 mb-12 md:mb-0'>
-                    <img className='  ' src="/src/assets/header-image.png" alt="" />
+                    <img className='  ' src="/public/images/header-image.png" alt="" />
                 </div>
             </div>
 
