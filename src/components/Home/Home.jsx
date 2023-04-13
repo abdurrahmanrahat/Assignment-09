@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import JobList from '../JobList/JobList';
 import FeaturedJob from '../FeaturedJob/FeaturedJob';
 import { useLoaderData } from 'react-router-dom';
+import BannerImage from '../../../public/images/header-image.png'
 
 const Home = () => {
     const [jobLists, setJobLists] = useState([]);
 
     const [featuredJobs, setFeaturedJobs] = useState([]);
+    const [showAll, setShowAll] = useState(false);
 
 
     // const featuredJobs = featuredJob.slice(0, 4);
@@ -37,7 +39,7 @@ const Home = () => {
                     <button className='btn-primary'>Get Started</button>
                 </div>
                 <div className='md:w-1/2 mb-12 md:mb-0'>
-                    <img className='  ' src="../../../public/images/header-image.png" alt="" />
+                    <img className=' ' src={BannerImage} alt="" />
                 </div>
             </div>
 
@@ -61,13 +63,23 @@ const Home = () => {
                 <p className='text-lg mt-4 text-gray-600'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className='md:grid grid-cols-2 my-12 md:gap-6'>
                     {
+                        showAll ? 
                         featuredJobs.map(featuredJob => <FeaturedJob
                             key={featuredJob.id}
                             featuredJob={featuredJob}
-                        ></FeaturedJob>).slice(0, 4)
+                        ></FeaturedJob>)
+                        :
+                        featuredJobs.slice(0, 4).map(featuredJob => <FeaturedJob
+                            key={featuredJob.id}
+                            featuredJob={featuredJob}
+                        ></FeaturedJob>)
                     }
                 </div>
-                <button className='btn-primary'>See All Jobs</button>
+                <div>
+                    {
+                        !showAll && <button onClick={() => setShowAll(true)} className='btn-primary'>See All Jobs</button>
+                    }
+                </div>
             </div>
         </div>
     );

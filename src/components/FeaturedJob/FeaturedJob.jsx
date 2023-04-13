@@ -10,7 +10,7 @@ const FeaturedJob = ({ featuredJob, handleJobViewDetails }) => {
             <img className='w-52 h-36' src={logo} alt="" />
             <h2 className='font-bold text-2xl'>{jobTitle}</h2>
             <p className='text-lg text-gray-600'>{companyName}</p>
-            <button className='btn-trans my-2'>{isRemote ? 'Remote' : 'Full-Time'}</button>
+            <button className='btn-trans my-2'>{isRemote}</button>
 
             <div className='flex text-lg text-gray-600'>
                 <p className='mr-8'><span></span>Location: {location}</p>
