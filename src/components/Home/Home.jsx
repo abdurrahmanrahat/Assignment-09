@@ -16,11 +16,6 @@ const Home = () => {
             .then(data => setFeaturedJobs(data))
     }, [])
 
-    // handler job view details page
-    const handleJobViewDetails = (job) =>{
-        console.log(job);
-    }
-
 
     // job list
     useEffect(() => {
@@ -69,7 +64,6 @@ const Home = () => {
                         featuredJobs.map(featuredJob => <FeaturedJob
                             key={featuredJob.id}
                             featuredJob={featuredJob}
-                            handleJobViewDetails={handleJobViewDetails}
                         ></FeaturedJob>).slice(0, 4)
                     }
                 </div>

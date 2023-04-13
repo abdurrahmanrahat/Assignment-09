@@ -2,6 +2,7 @@ import { data } from 'autoprefixer';
 import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { JobsContext } from '../../App';
+import { addToDb } from '../../utilities/fakedb';
 
 const JobViewDetails = () => {
     const jobsDetails = useContext(JobsContext);
@@ -19,10 +20,16 @@ const JobViewDetails = () => {
 
 
     const { jobId } = useParams();
-    console.log(jobId);
+    // console.log(jobId);
 
     const singleJob = jobsDetails.find(singleJob => singleJob.id == jobId);
-    console.log(singleJob);
+    // console.log(singleJob);
+
+    // handler apply now btn 
+    const handleApplyNow = (id) => {
+        console.log(id);
+        addToDb(id);
+    }
 
     return (
         <div className='md:flex my-container gap-14 my-12'>
@@ -49,7 +56,7 @@ const JobViewDetails = () => {
                     <p className='text-lg text-gray-600 mb-2'><span className='text-gray-900 font-semibold'>Email:</span> {singleJob.email}(Per Month)</p>
                     <p className='text-lg text-gray-600 mb-8'><span className='text-gray-900 font-semibold'>Address:</span> {singleJob.address}</p>
                 </div>
-                <button className='btn-primary w-full'>Apply Now</button>
+                <button onClick={() => handleApplyNow(jobId)} className='btn-primary w-full'>Apply Now</button>
             </div>
         </div>
     );

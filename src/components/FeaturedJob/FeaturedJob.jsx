@@ -17,7 +17,7 @@ const FeaturedJob = ({ featuredJob, handleJobViewDetails }) => {
                 <p><span></span>Salary: {salary}</p>
             </div>
 
-            <Link to={`/jobViewDetails/${id}`}><button onClick={handleJobViewDetails} className='btn-primary'>View Details</button></Link>
+            <Link to={`/jobViewDetails/${id}`}><button className='btn-primary'>View Details</button></Link>
         </div>
     );
 };
